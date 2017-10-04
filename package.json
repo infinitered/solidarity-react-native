@@ -1,0 +1,10 @@
+{
+  "name": "solidarity-react-native",
+  "version": "0.0.1",
+  "description": "Solidarity snapshot for React Native projects",
+  "main": "index.js",
+  "repository": "https://github.com/infinitered/solidarity-react-native",
+  "author": "Gant Laborde",
+  "license": "MIT",
+  "private": false
+}
