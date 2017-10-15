@@ -4,8 +4,6 @@
     { "rule": "cli", "binary": "android" },
     { "rule": "env", "variable": "ANDROID_HOME", "error": "The ANDROID_HOME environment variable must be set to your local SDK.  Refer to getting started docs for help." }
   ],
-  "NPM": [{ "rule": "cli", "binary": "npm" }],
-  "Yarn": [{ "rule": "cli", "binary": "yarn", "semver": "0.0.0", "version": "--version" }],
   "Node": [{ "rule": "cli", "binary": "node", "semver": "0.0.0"}],
   "Watchman": [
     {
@@ -23,8 +21,8 @@
     { "rule": "cli", "binary": "xcodebuild", "semver": "0.0", "platform": "darwin"},
     { "rule": "cli", "binary": "xcrun", "semver": "0", "platform": "darwin"}
   ],
-  "Cocoapods": [
-    { "rule": "cli", "binary": "pod", "semver": "0.0.0" }
+  "Package JSON": [
+    { "rule": "file", "location": "./package.json"}
   ]
 }
 
