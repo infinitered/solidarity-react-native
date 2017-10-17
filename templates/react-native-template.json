@@ -14,7 +14,6 @@
     }
   ],
   "React Native": [
-    { "rule": "cli", "binary": "react-native", "semver": "0.0.0"},
     { "rule": "cli", "binary": "react-native", "semver": "0.0.0", "line": 2 }
   ],
   "Xcode" : [
