@@ -26,6 +26,6 @@ module.exports = (context, requirements) => {
 
   // Add if binary AND ios/Podfile.lock exits
   if (binaryExists('pod', context) && filesystem.exists('./ios/Podfile.lock') === 'file') {
-    requirements['Cocoapods'] = pod
+    requirements['CocoaPods'] = pod
   }
 }
