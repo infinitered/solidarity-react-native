@@ -5,5 +5,12 @@
   "repository": "https://github.com/infinitered/solidarity-react-native",
   "author": "Gant Laborde",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "test": "echo not yet",
+    "shipit": "np"
+  },
+  "devDependencies": {
+    "np": "^2.16.0"
+  }
 }
