@@ -7,6 +7,10 @@ module.exports = (context, requirements) => {
   const npm = [{rule: 'cli', binary: 'npm', semver: '0.0.0'}]
   const yarn = [{rule: 'cli', binary: 'yarn', version: '--version', semver: '0.0.0'}]
   const pod = [{rule: 'cli', binary: 'pod', platform: 'darwin', semver: '0.0.0'}]
+  const detox = [
+    {rule: 'cli', binary: 'detox'},
+    {rule: 'cli', binary: 'applesimutils', error: 'Try `brew install --HEAD applesimutils`', platform: 'darwin'}
+  ]
 
   // Add if binary exists
   if (binaryExists('mobile-center', context)) {
@@ -27,5 +31,9 @@ module.exports = (context, requirements) => {
   // Add if binary AND ios/Podfile.lock exits
   if (binaryExists('pod', context) && filesystem.exists('./ios/Podfile.lock') === 'file') {
     requirements['CocoaPods'] = pod
+  }
+
+  if (binaryExists('detox', context)) {
+    requirements['Detox'] = detox
   }
 }

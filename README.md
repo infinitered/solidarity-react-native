@@ -16,6 +16,7 @@ This plugin snapshots these Solidarity requirements:
   * NPM
   * Yarn
   * CocoaPods
+  * Detox
 
 # What is Solidarity?
 #### [:newspaper: Read More About Solidarity Here](https://github.com/infinitered/solidarity)
