@@ -9,8 +9,8 @@
     {
       "rule": "cli",
       "binary": "watchman",
-      "error": "install watchman `brew install watchman`",
-      "platform": "darwin"
+      "error": "Please install watchman on this machine. Refer to the official Watchman installation instructions for additional help.",
+      "platform": ["darwin", "linux"]
     }
   ],
   "React Native": [
@@ -24,4 +24,3 @@
     { "rule": "file", "location": "./package.json"}
   ]
 }
-
