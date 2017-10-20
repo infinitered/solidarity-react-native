@@ -7,11 +7,11 @@ module.exports = (context) => {
     description: 'Snapshot solidarity rules for React Native projects',
     snapshot: async (context) => {
       // start with template
-      let requirements = require('../templates/react-native-template.json')
+      let solidarity = require('../templates/react-native-template.json')
       // add optional rules
-      addOptionalRules(context, requirements)
+      addOptionalRules(context, solidarity.requirements)
       // write out .solidarity file
-      context.solidarity.setSolidaritySettings(requirements, context)
+      context.solidarity.setSolidaritySettings(solidarity, context)
       // update file with local versions
       await context.system.run('solidarity snapshot')
     }
