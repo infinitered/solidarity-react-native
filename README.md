@@ -1,4 +1,4 @@
-<a href='https://infinitered.github.io/solidarity/'><img src='https://github.com/infinitered/solidarity/raw/master/_art/plugin.jpg' align='left' height="50"/></a>
+<a href='https://infinitered.github.io/solidarity/'><img src='https://github.com/infinitered/solidarity/raw/master/_art/plugin.jpg' align='left' height="60"/></a>
 
 # solidarity-react-native
 ### For quickly taking snapshots of environments for React Native projects
