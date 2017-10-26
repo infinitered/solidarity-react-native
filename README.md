@@ -8,11 +8,9 @@ By using this plugin to solidarity, you can snapshot your environment to verify 
 
 This plugin snapshots these Solidarity requirements:
 * Always Adds
-  * Android
   * Node
   * Watchman
   * React Native
-  * Xcode
   * Package.json
 * If detected Adds
   * Mobile Center
@@ -21,6 +19,8 @@ This plugin snapshots these Solidarity requirements:
   * Yarn
   * CocoaPods
   * Detox
+  * Android
+  * Xcode
 
 # What is Solidarity?
 #### [:newspaper: Read More About Solidarity Here](https://github.com/infinitered/solidarity)
