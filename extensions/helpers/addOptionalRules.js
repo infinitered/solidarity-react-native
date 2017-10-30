@@ -6,19 +6,22 @@ module.exports = (context, requirements) => {
   const codePush = [{rule: 'cli', binary: 'code-push', semver: '0.0.0'}]
   const npm = [{rule: 'cli', binary: 'npm', semver: '0.0.0'}]
   const yarn = [{rule: 'cli', binary: 'yarn', version: '--version', semver: '0.0.0'}]
-  const pod = [{rule: 'cli', binary: 'pod', platform: 'darwin', semver: '0.0.0'}]
+  const pod = [
+    {rule: 'cli', binary: 'pod', platform: 'darwin', semver: '0.0.0'},
+    {rule: 'dir', location: './ios/Pods'}
+  ]
   const detox = [
     {rule: 'cli', binary: 'detox'},
     {rule: 'cli', binary: 'applesimutils', error: 'Try `brew install --HEAD applesimutils`', platform: 'darwin'}
   ]
   const android = [
-    { "rule": "cli", "binary": "emulator" },
-    { "rule": "cli", "binary": "android" },
-    { "rule": "env", "variable": "ANDROID_HOME", "error": "The ANDROID_HOME environment variable must be set to your local SDK.  Refer to getting started docs for help." }
+    { rule: 'cli', binary: 'emulator' },
+    { rule: 'cli', binary: 'android' },
+    { rule: 'env', variable: 'ANDROID_HOME', error: 'The ANDROID_HOME environment variable must be set to your local SDK.  Refer to getting started docs for help.' }
   ]
   const xcode = [
-    { "rule": "cli", "binary": "xcodebuild", "semver": "0.0", "platform": "darwin"},
-    { "rule": "cli", "binary": "xcrun", "semver": "0", "platform": "darwin"}
+    { rule: 'cli', binary: 'xcodebuild', semver: '0.0', platform: 'darwin' },
+    { rule: 'cli', binary: 'xcrun', semver: '0', platform: 'darwin' }
   ]
 
   // Add if binary exists
