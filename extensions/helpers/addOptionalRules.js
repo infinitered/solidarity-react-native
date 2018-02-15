@@ -15,9 +15,8 @@ module.exports = (context, requirements) => {
     {rule: 'cli', binary: 'applesimutils', error: 'Try `brew install --HEAD applesimutils`', platform: 'darwin'}
   ]
   const android = [
-    { rule: 'cli', binary: 'emulator' },
-    { rule: 'cli', binary: 'android' },
-    { rule: 'env', variable: 'ANDROID_HOME', error: 'The ANDROID_HOME environment variable must be set to your local SDK.  Refer to getting started docs for help.' }
+    { rule: 'env', variable: 'ANDROID_HOME', error: 'The ANDROID_HOME environment variable must be set to your local SDK.  Refer to getting started docs for help.' },
+    { rule: 'custom', plugin: 'React Native', name: 'androidVersion' }
   ]
   const xcode = [
     { rule: 'cli', binary: 'xcodebuild', semver: '0.0', platform: 'darwin' },
