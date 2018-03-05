@@ -6,6 +6,9 @@ module.exports = (context, requirements) => {
   const codePush = [{rule: 'cli', binary: 'code-push', semver: '0.0.0'}]
   const npm = [{rule: 'cli', binary: 'npm', semver: '0.0.0'}]
   const yarn = [{rule: 'cli', binary: 'yarn', version: '--version', semver: '0.0.0'}]
+  const typescript = [
+    {rule: 'cli', binary: 'tsc', semver: '0.0.0'}
+  ]
   const pod = [
     {rule: 'cli', binary: 'pod', platform: 'darwin', semver: '0.0.0'},
     {rule: 'dir', location: './ios/Pods'}
@@ -32,6 +35,10 @@ module.exports = (context, requirements) => {
   }
   if (binaryExists('npm', context)) {
     requirements['NPM'] = npm
+  }
+
+  if (binaryExists('tsc', context) && filesystem.exists('./tsconfig.json')) {
+    requirements['TypeScript'] = typescript
   }
 
   // Add if binary AND yarn.lock exits

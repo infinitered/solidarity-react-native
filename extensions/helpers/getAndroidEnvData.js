@@ -10,7 +10,7 @@ module.exports = (context) => {
       availableApiVersions: androidData['API Levels'],
       availableBuildToolsVersions: androidData['Build Tools'],
       projectApiVersion: /compileSdkVersion\s(\d+)/.exec(androidGradle)[1],
-      projectBuildToolsVersion: /buildToolsVersion\s\"([\d|.]+)\"/.exec(androidGradle)[1]
+      projectBuildToolsVersion: /buildToolsVersion\s["|']([\d|.]+)["|']/.exec(androidGradle)[1]
     }
   } else {
     return { androidGradle: null }

@@ -20,6 +20,7 @@ This plugin snapshots these Solidarity requirements:
   * CocoaPods
   * Detox
   * Android
+  * TypeScript
   * Xcode
 
 # What is Solidarity?
