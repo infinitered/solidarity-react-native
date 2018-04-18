@@ -38,7 +38,7 @@ module.exports = (context) => {
             } else {
               let failMessages = []
               if (!buildGood) failMessages.push(`Build Tool ${projectBuildToolsVersion} Not Found`)
-              if (!apiGood) failMessage.push(`API ${projectApiVersion} Not Found`)
+              if (!apiGood) failMessages.push(`API ${projectApiVersion} Not Found`)
               return {
                 pass: false,
                 message: failMessages.join(' & ')
