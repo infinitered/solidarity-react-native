@@ -4,7 +4,20 @@
 ### For quickly taking snapshots of environments for React Native projects
 By using this plugin to solidarity, you can snapshot your environment to verify the project is in a similar environment on other machines.
 
+# How to use this plugin
 
+```bash
+npm i -g solidarity-react-native
+# or
+yarn add global solidarity-react-native
+
+# go to your react native project and run:
+solidarity snapshot
+```
+
+this will check the dependencies you have installed and needed in that project and creates the `.solidarity` file.
+
+# Requirements
 
 This plugin snapshots these Solidarity requirements:
 * Always Adds
