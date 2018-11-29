@@ -8,7 +8,8 @@
   "private": false,
   "scripts": {
     "test": "echo not yet",
-    "shipit": "np"
+    "shipit": "np",
+    "ci:test": "yarn test",
   },
   "peerDependencies": {
     "solidarity": "^2.0.0"
