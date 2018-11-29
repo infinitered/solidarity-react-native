@@ -9,12 +9,16 @@
   "scripts": {
     "test": "echo not yet",
     "shipit": "np",
-    "ci:test": "yarn test"
+    "ci:test": "yarn test",
+    "ci:publish": "yarn semantic-release",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "solidarity": "^2.0.0"
   },
   "devDependencies": {
-    "np": "^2.16.0"
+    "@semantic-release/git": "^7.0.5",
+    "np": "^2.16.0",
+    "semantic-release": "^15.12.3"
   }
 }
