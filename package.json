@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo not yet",
     "shipit": "np",
-    "ci:test": "yarn test",
+    "ci:test": "yarn test"
   },
   "peerDependencies": {
     "solidarity": "^2.0.0"
