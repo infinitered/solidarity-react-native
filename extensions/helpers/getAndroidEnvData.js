@@ -6,12 +6,14 @@ const executeRegexOnFiles = (regex, files) => {
   }
 };
 
-module.exports = context => {
-  const { envInfo, filesystem } = context;
+module.exports = async context => {
+  const { envinfo, filesystem } = context;
   // Version specified by RN project settings
-  const androidAppGradle = filesystem.read("./android/app/build.gradle");
-  const androidGradle = filesystem.read("./android/build.gradle");
-  const androidData = envInfo.getAllAndroidSDKs();
+  const androidAppGradle = await filesystem.readAsync(
+    "./android/app/build.gradle"
+  );
+  const androidGradle = await filesystem.readAsync("./android/build.gradle");
+  const androidData = await envinfo.getAndroidSDKInfo();
 
   if (androidAppGradle) {
     return {
