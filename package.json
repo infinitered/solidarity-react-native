@@ -29,7 +29,7 @@
     ]
   },
   "peerDependencies": {
-    "solidarity": "^2.0.0"
+    "solidarity": "^2.3.1"
   },
   "devDependencies": {
     "@semantic-release/git": "^7.0.5",
