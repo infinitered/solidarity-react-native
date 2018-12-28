@@ -25,7 +25,7 @@ module.exports = context => {
             availableBuildToolsVersions,
             projectApiVersion,
             projectBuildToolsVersion
-          } = getAndroidEnvData(context);
+          } = await getAndroidEnvData(context);
 
           if (androidAppGradle) {
             const buildGood = availableBuildToolsVersions.includes(
@@ -66,7 +66,7 @@ module.exports = context => {
             availableBuildToolsVersions,
             projectApiVersion,
             projectBuildToolsVersion
-          } = getAndroidEnvData(context);
+          } = await getAndroidEnvData(context);
 
           const projectAPIMessage = availableApiVersions.includes(
             projectApiVersion
