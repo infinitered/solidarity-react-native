@@ -18,8 +18,8 @@ module.exports = async context => {
   if (androidAppGradle) {
     return {
       androidAppGradle,
-      availableApiVersions: androidData["API Levels"],
-      availableBuildToolsVersions: androidData["Build Tools"],
+      availableApiVersions: androidData[1]["API Levels"],
+      availableBuildToolsVersions: androidData[1]["Build Tools"],
       projectApiVersion: executeRegexOnFiles(/compileSdkVersion\s=?\s?(\d+)/, [
         androidAppGradle,
         androidGradle
