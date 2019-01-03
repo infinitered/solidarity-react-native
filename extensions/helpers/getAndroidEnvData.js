@@ -33,7 +33,6 @@ module.exports = async context => {
       )
     }
   } else {
-    console.log('No android App gradle', androidAppGradle)
     return { androidAppGradle: null };
   }
 };
