@@ -19,14 +19,14 @@ module.exports = context => {
     rules: {
       androidVersion: {
         check: async (rule, context) => {
-          const androidEnvData = await getAndroidEnvData(context)
           const {
             androidAppGradle,
             availableApiVersions,
             availableBuildToolsVersions,
             projectApiVersion,
             projectBuildToolsVersion
-          } = androidEnvData
+          } = await getAndroidEnvData(context);
+
 
           if (androidAppGradle) {
             const buildGood = availableBuildToolsVersions.includes(
@@ -67,6 +67,7 @@ module.exports = context => {
             projectApiVersion,
             projectBuildToolsVersion
           } = await getAndroidEnvData(context)
+
 
           const projectAPIMessage = availableApiVersions.includes(
             projectApiVersion
