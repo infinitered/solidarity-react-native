@@ -9,7 +9,7 @@ By using this plugin to solidarity, you can snapshot your environment to verify 
 ```bash
 npm i -g solidarity-react-native
 # or
-yarn add global solidarity-react-native
+yarn global add solidarity-react-native
 
 # go to your react native project and run:
 solidarity snapshot
