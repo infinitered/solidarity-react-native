@@ -16,13 +16,15 @@ module.exports = async context => {
 
   const androidAppGradle = await filesystem.readAsync(appGradlePath)
   const androidGradle = await filesystem.readAsync(gradlePath)
-  const androidData = await envinfo.getAndroidSDKInfo()
+  const androidSDKInfo = await envinfo.getAndroidSDKInfo();
+  // to get the object - the first item is the string 'Android SDK'
+  const androidData = androidSDKInfo[1];
 
   if (androidAppGradle) {
     return {
       androidAppGradle,
-      availableApiVersions: androidData[1]["API Levels"],
-      availableBuildToolsVersions: androidData[1]["Build Tools"],
+      availableApiVersions: androidData["API Levels"],
+      availableBuildToolsVersions: androidData["Build Tools"],
       projectApiVersion: executeRegexOnFiles(/compileSdkVersion\s=?\s?(\d+)/, [
         androidAppGradle,
         androidGradle
